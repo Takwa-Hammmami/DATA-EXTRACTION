@@ -23,7 +23,7 @@ ORDER BY T0."CardCode";
 -- ============================================================================
 -- Type d'anomalie : Données manquantes
 -- Description : Clients actifs sans numéro d'identification fiscale
--- Impact : Non-conformité réglementaire, problèmes de déclaration TVA
+
 -- ============================================================================
 
 SELECT 
@@ -44,7 +44,7 @@ ORDER BY T0."CardCode";
 -- ============================================================================
 -- Type d'anomalie : Données incohérentes
 -- Description : Listes de prix sans dates de validité ou expirées
--- Impact : Application de prix erronés ou impossibilité de vendre
+
 -- ============================================================================
 
 SELECT 
@@ -71,7 +71,7 @@ ORDER BY T0."ValidTo" DESC;
 -- ============================================================================
 -- Type d'anomalie : Données manquantes
 -- Description : Articles configurés pour la vente mais sans prix défini
--- Impact : Impossibilité de créer des commandes ou factures
+
 -- ============================================================================
 
 SELECT 
@@ -95,7 +95,7 @@ ORDER BY T0."ItemCode";
 -- ============================================================================
 -- Type d'anomalie : Données manquantes
 -- Description : Clients actifs sans conditions de paiement définies
--- Impact : Impossibilité de générer des factures avec échéances correctes
+
 -- ============================================================================
 
 SELECT 
@@ -141,7 +141,7 @@ ORDER BY T0."CardCode";
 -- ============================================================================
 -- Type d'anomalie : Données incohérentes
 -- Description : Articles marqués comme inactifs mais configurés pour la vente
--- Impact : Confusion, risque de vendre des produits obsolètes
+
 -- ============================================================================
 
 SELECT DISTINCT
@@ -161,7 +161,7 @@ ORDER BY T0."ItemCode";
 -- ============================================================================
 -- Type d'anomalie : Données incohérentes
 -- Description : Unité de mesure de vente différente de l'unité de stock
--- Impact : Risque d'erreurs de conversion, problèmes de quantités
+
 -- ============================================================================
 
 SELECT 
@@ -252,8 +252,7 @@ ORDER BY T0."CreateDate" DESC;
 -- 4 : Articles sans groupe d'articles
 -- ============================================================================
 -- Description : Articles non catégorisés
--- Impact : Impossibilité de classer et analyser les ventes par catégorie
--- ============================================================================
+- ============================================================================
 
 SELECT 
     T0."ItemCode",
