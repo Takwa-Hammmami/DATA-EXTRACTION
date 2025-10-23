@@ -3,10 +3,13 @@
 -- ========================================
 -- Détecte les articles dont l'unité d'inventaire n'est pas renseignée
 
-SELECT ItemCode, ItemName, InvntryUom
-FROM OITM
-WHERE InvntryUom IS NULL OR TRIM(InvntryUom) = '';
-
+SELECT 
+    "ItemCode",
+    "ItemName",
+    "InvntryUom"
+FROM "OITM"
+WHERE "InvntryUom" IS NULL 
+   OR TRIM("InvntryUom") = '';
 -- ========================================
 -- 2) Articles sans unité de conversion (UoM secondaire différente de l'UoM d'inventaire)
 -- ========================================
