@@ -4,7 +4,6 @@
 -- ============================================================================
 -- Type d'anomalie : Données manquantes
 -- Description : Articles configurés en fabrication mais sans BOM définie
-
 -- ============================================================================
 SELECT 
     T0."ItemCode",
