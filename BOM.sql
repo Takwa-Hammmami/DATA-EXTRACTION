@@ -14,7 +14,6 @@ LEFT JOIN "OITT" T1 ON T1."Code" = T0."ItemCode"
 WHERE T0."PrcrmntMtd" = 'M'
   AND T1."Code" IS NULL;
 
-
 -- ============================================================================
 -- 2. BOM avec composants manquants
 -- ============================================================================
